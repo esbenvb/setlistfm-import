@@ -94,8 +94,14 @@ function getSongList(query, timeLimit, minAmount) {
         if (eventDate.getTime() < earliestDate.getTime() && j >= minAmount) {
           continue;
         }
-        for(var k in setlist.sets.set) {
-          var set = setlist.sets.set[k];
+        if (setlist.sets.set instanceof Array) {
+          var sets = setlist.sets.set;
+        }
+        else {
+          var sets = [setlist.sets.set];
+        }
+        for(var k in sets) {
+          var set = sets[k];
           for(var l in set.song) {
             var song = set.song[l];
             var name = song['@name'];
