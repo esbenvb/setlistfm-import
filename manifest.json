@@ -1,0 +1,26 @@
+    {
+  "AppDescription": {
+    "en": "Playlist generator for bands from setlist.fm"
+  },
+  "AppName": {
+    "en": "Setlist.fm playlists"
+  },
+  "AppIcon": {
+    "18x18": "icons/18x18.png",
+    "64x64:": "icons/64x64:.png",
+    "128x128": "icons/128x128.png",
+    "300x300": "icons/300x300.png"
+  },
+  "BundleIdentifier": "setlistfm-import",
+  "BundleType": "Application",
+  "BundleVersion": "0.1",
+  "SupportedLanguages": ["en"],
+  "VendorIdentifier": "dk.vonbuchwald.esben",
+  "Dependencies": {
+    "api": "0.1.0",
+    "resources": "0.1.0",
+    "util": "0.1.0"
+   },
+   "AcceptedLinkTypes": ["artist"],
+   "RequiredPermissions": [ "http://*.spotify.com", "http://spotify.com", "http://api.setlist.fm"]
+}
