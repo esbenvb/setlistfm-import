@@ -89,19 +89,32 @@ function getSongList(query, timeLimit, minAmount) {
     }
     jQuery.getJSON('http://api.setlist.fm/rest/0.1/artist/' + artist['@mbid'] + '/setlists.json', function(data){
       for(var j in data.setlists.setlist) {
+      // One setlist.
+      if (!(data.setlists.setlist instanceof Array)) {
+        data.setlists.setlist = [data.setlists.setlist];
+      }
         var setlist = data.setlists.setlist[j];
         var eventDate = sldate2date(setlist['@eventDate']);
         if (eventDate.getTime() < earliestDate.getTime() && j >= minAmount) {
           continue;
         }
-        if (setlist.sets.set instanceof Array) {
-          var sets = setlist.sets.set;
+        // Multiple sets.
+        if (!(setlist.sets.set instanceof Array)) {
+          // No sets.
+          if (!(setlist.sets.set instanceof Object)) {
+            continue;
+          }
+          // One set.
+          else {
+            setlist.sets.set = [setlist.sets.set];
+          }
         }
-        else {
-          var sets = [setlist.sets.set];
-        }
-        for(var k in sets) {
-          var set = sets[k];
+        for(var k in setlist.sets.set) {
+          var set = setlist.sets.set[k];
+          // One song.
+          if (!(set.song instanceof Array)) {
+            set.song = [set.song];
+          }
           for(var l in set.song) {
             var song = set.song[l];
             var name = song['@name'];
