@@ -36,7 +36,7 @@ function findAndAdd(artist, track, playlist) {
     pageSize: 10
   };
 
-  var search = new models.Search('artist:' + artist + ' track:' + track, options);
+  var search = new models.Search('artist:"' + artist.replace("'",'') + '"' + ' track:"' + track.replace("'",'') + '"', options);
   search.observe(models.EVENT.CHANGE, function() {
     console.log(search);
     var results = search.tracks;
