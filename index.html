@@ -12,11 +12,41 @@
 <div class="section">
 </div>
 
-
+The max. number of concerts to import tracks from are limited to the 20 most recent concerts.
 
 <form id="search">
-  <input type="text" id="query" />
-  <input type="submit" />
+  <ul>
+    <li>Band name <input type="text" id="query" />
+    </li>
+    <li>Time window (how long back)
+      <select id ="timelimit">
+        <option value="86400">1 day</option>
+        <option value="604800">1 week</option>
+        <option value="2592000">30 days</option>
+        <option selected="selected" value="7884000">3 months</option>
+        <option value="15768000">6 months</option>
+        <option value="31536000">1 year</option>
+        <option value="157680000">5 years</option>
+        <option value="315360000">10 years</option>
+        <option value="630720000">20 years</option>
+        <option value="-1">None</option>
+      </select>
+    </li>
+    <li>Minimum setlists to import (overrules time limit)
+      <select id ="minamount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option selected="selected" value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+    </li>
+    <li>
+      <input type="submit" value="Import"/>
+    </li>
+  </ul>
 </form>
 
 <a href="#" id="link">hej</a>

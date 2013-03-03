@@ -8,9 +8,9 @@ $(document).ready(function () {
 
     var d = new Date;
     playlist = new models.Playlist('Playlist-' + d.getTime());
-    var timeLimit= 3*30*24*60*60; // 90 days back in time
-    var minAmount = 3;    
     var query = $('#query').val();
+    var timeLimit = parseInt($('#timelimit').val());
+    var minAmount = parseInt($('#minamount').val());
     getSongList(query, timeLimit, minAmount);
     return false;
   });
