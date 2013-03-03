@@ -95,7 +95,7 @@ function getSongList(query, timeLimit, minAmount) {
       for (var j in data.setlists.setlist) {
         var setlist = data.setlists.setlist[j];
         var eventDate = sldate2date(setlist['@eventDate']);
-        if (eventDate.getTime() < earliestDate.getTime() && j >= minAmount) {
+        if (timeLimit > -1 && eventDate.getTime() < earliestDate.getTime() && j >= minAmount) {
           continue;
         }
         // Multiple sets.
