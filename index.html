@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="sp://resources/css/eve.css">
   <script src="jquery.min.js"></script>
   <script src="jquery.autosize.js"></script>
+  <script src="jquery.textchange.js"></script>
   <script src="string_score.js"></script>
   <script src="app.js"></script>
 </head>
@@ -18,7 +19,8 @@ The max. number of concerts to import tracks from are limited to the 20 most rec
       <label for="query-multiple">Band names (one on each line)</label>
       <textarea rows="1" id="query-multiple"></textarea>
     </li>
-    <li>Time window (how long back)
+     <li>
+      <label for="timelimit">Time window (how long back)</label>
       <select id ="timelimit">
         <option value="86400">1 day</option>
         <option value="604800">1 week</option>
@@ -32,7 +34,8 @@ The max. number of concerts to import tracks from are limited to the 20 most rec
         <option value="-1">None</option>
       </select>
     </li>
-    <li>Minimum setlists to import (overrules time limit)
+    <li>
+      <label for="minamount">Minimum setlists to import (overrules time limit)</label>
       <select id ="minamount">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -43,8 +46,19 @@ The max. number of concerts to import tracks from are limited to the 20 most rec
         <option value="7">7</option>
       </select>
     </li>
+    <li id="playlist-recent-container">
+      <label for="playlist-recent">Recent playlists</label>
+      <select id ="playlist-recent">
+        <option selected value="-1">-- Create new --</option>
+      </select>
+    </li>
+    <li id="playlist-name-container">
+      <label for="playlist-name">Playlist name</label>
+      <input type="text" id ="playlist-name" />
+    </li>
+
     <li>
-      <input type="submit" value="Import"/>
+      <input type="submit" id="submit-button" value="Import"/>
     </li>
   </ul>
 </form>

@@ -1,13 +1,38 @@
 var sp = getSpotifyApi();
 var models = sp.require('$api/models');
-// Make select: Choose existing or create new.
+
 var playlist = null;
+//TODO: Use local storage for list if possible.
+var recentPlaylists = [];
 
 $(document).ready(function () {
-  $('#search').submit(function() {
+  $('textarea').autosize();
+  $('#playlist-recent-container').hide();
+  $('#submit-button').attr('disabled', 'disabled');
 
-    var d = new Date;
-    playlist = new models.Playlist('Playlist-' + d.getTime());
+  $('#playlist-name').bind('textchange', function(event, previousText){
+    if ($(this).val().length) {
+      $('#submit-button').removeAttr('disabled');
+    }
+    else {
+      $('#submit-button').attr('disabled', 'disabled');
+    }
+  });
+
+  $('#search').submit(function() {
+    if (playlist == null) {
+      if ($('#playlist-name').val().length) {
+        playlist = new models.Playlist($('#playlist-name').val());
+          recentPlaylists.push(playlist);
+          $('#playlist-recent').append($('<option></option>')
+            .attr('value', recentPlaylists.length - 1)
+            .text(playlist.data.name ));
+          $('#playlist-name').val('');
+          $('#playlist-recent').val(recentPlaylists.length - 1);
+          $('#playlist-recent-container').fadeIn('fast');
+          $('#playlist-name-container').fadeOut('fast');
+      }
+    }
     var timeLimit = parseInt($('#timelimit').val());
     var minAmount = parseInt($('#minamount').val());
 
@@ -18,6 +43,24 @@ $(document).ready(function () {
       }
     }
     return false;
+  });
+
+  $('#playlist-recent').change(function(){
+    if ($(this).val() > -1) {
+      playlist = recentPlaylists[$(this).val()];
+      $('#playlist-name-container').fadeOut('fast');
+      $('#submit-button').removeAttr('disabled');
+    }
+    else {
+      $('#playlist-name-container').fadeIn('fast');
+      playlist = null;
+      if ($('#playlist-name').val().length) {
+        $('#submit-button').removeAttr('disabled');
+      }
+      else {
+        $('#submit-button').attr('disabled', 'disabled');
+      }
+    }
   });
 });
 
