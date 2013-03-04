@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
   <link rel="stylesheet" href="sp://resources/css/eve.css">
+  <link href='http://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/screen.css">
   <script src="jquery.min.js"></script>
   <script src="jquery.autosize.js"></script>
   <script src="jquery.textchange.js"></script>
@@ -11,61 +13,71 @@
 </head>
 <body>
 
-The max. number of concerts to import tracks from are limited to the 20 most recent concerts.
+<div class="page-wrapper">
+  <div class="region top">
+    <h1>Spotify fuck yeah app!</h1>
+  </div>
 
-<form id="search">
-  <ul>
-    <li>
-      <label for="query-multiple">Band names (one on each line)</label>
-      <textarea rows="1" id="query-multiple"></textarea>
-    </li>
-     <li>
-      <label for="timelimit">Time window (how long back)</label>
-      <select id ="timelimit">
-        <option value="86400">1 day</option>
-        <option value="604800">1 week</option>
-        <option value="2592000">30 days</option>
-        <option selected="selected" value="7884000">3 months</option>
-        <option value="15768000">6 months</option>
-        <option value="31536000">1 year</option>
-        <option value="157680000">5 years</option>
-        <option value="315360000">10 years</option>
-        <option value="630720000">20 years</option>
-        <option value="-1">None</option>
-      </select>
-    </li>
-    <li>
-      <label for="minamount">Minimum setlists to import (overrules time limit)</label>
-      <select id ="minamount">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option selected="selected" value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-      </select>
-    </li>
-    <li id="playlist-recent-container">
-      <label for="playlist-recent">Recent playlists</label>
-      <select id ="playlist-recent">
-        <option selected value="-1">-- Create new --</option>
-      </select>
-    </li>
-    <li id="playlist-name-container">
-      <label for="playlist-name">Playlist name</label>
-      <input type="text" id ="playlist-name" />
-    </li>
+  <div class="region main">
+    <p>The max. number of concerts to import tracks from are limited to the 20 most recent concerts.</p>
+    <form id="search">
+      <ul class="form-items">
+        <li>
+          <label for="query-multiple">Band names (one on each line)</label>
+          <textarea rows="5" id="query-multiple"></textarea>
+        </li>
+         <li>
+          <label for="timelimit">Time window (how long back)</label>
+          <select id ="timelimit">
+            <option value="86400">1 day</option>
+            <option value="604800">1 week</option>
+            <option value="2592000">30 days</option>
+            <option selected="selected" value="7884000">3 months</option>
+            <option value="15768000">6 months</option>
+            <option value="31536000">1 year</option>
+            <option value="157680000">5 years</option>
+            <option value="315360000">10 years</option>
+            <option value="630720000">20 years</option>
+            <option value="-1">None</option>
+          </select>
+        </li>
+        <li>
+          <label for="minamount">Minimum setlists to import (overrules time limit)</label>
+          <select id ="minamount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option selected="selected" value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </li>
+        <li id="playlist-recent-container">
+          <label for="playlist-recent">Recent playlists</label>
+          <select id ="playlist-recent">
+            <option selected value="-1">-- Create new --</option>
+          </select>
+        </li>
+        <li id="playlist-name-container">
+          <label for="playlist-name">Playlist name</label>
+          <input type="text" id ="playlist-name" />
+        </li>
 
-    <li>
-      <input type="submit" id="submit-button" value="Import"/>
-    </li>
-  </ul>
-</form>
+        <li>
+          <input type="submit" id="submit-button" value="Import"/>
+        </li>
+      </ul>
+    </form>
 
-<div id="results">
+    <div id="results">
+    </div>
+  </div>
+
+  <div class="region bottom">
+    <span>Made by Esben n shit.</span>
+  </div>
 </div>
-
 
 
 </body>
