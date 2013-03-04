@@ -221,12 +221,13 @@ ul.form-items li > label {
   display: block;
   margin: 0 0 5px 0;
 }
-/* line 128, ../scss/screen.scss */
-ul.form-items li:first-child, ul.form-items li:last-child {
+/* line 127, ../scss/screen.scss */
+ul.form-items li:first-child {
   float: left;
   margin-left: -250px;
 }
-/* line 132, ../scss/screen.scss */
-ul.form-items li:first-child > textarea, ul.form-items li:last-child > textarea {
+/* line 131, ../scss/screen.scss */
+ul.form-items li:first-child > textarea {
   width: 100%;
+  resize: none;
 }

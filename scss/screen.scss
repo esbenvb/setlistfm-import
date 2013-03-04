@@ -124,13 +124,13 @@ ul.form-items {
       margin: 0 0 5px 0;
     }
 
-    &:first-child,
-    &:last-child {
+    &:first-child {
       float: left;
       margin-left: -250px;
 
       & > textarea {
         width: 100%;
+        resize: none;
       }
     }
   }
