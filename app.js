@@ -8,10 +8,15 @@ $(document).ready(function () {
 
     var d = new Date;
     playlist = new models.Playlist('Playlist-' + d.getTime());
-    var query = $('#query').val();
     var timeLimit = parseInt($('#timelimit').val());
     var minAmount = parseInt($('#minamount').val());
-    getSongList(query, timeLimit, minAmount);
+
+    var queries = $('#query-multiple').val().split("\n");
+    for (i in queries) {
+      if (queries[i].length > 0) {
+        getSongList(queries[i], timeLimit, minAmount);
+      }
+    }
     return false;
   });
 });

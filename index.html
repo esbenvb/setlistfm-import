@@ -4,6 +4,7 @@
     <meta charset="utf-8">
   <link rel="stylesheet" href="sp://resources/css/eve.css">
   <script src="jquery.min.js"></script>
+  <script src="jquery.autosize.js"></script>
   <script src="string_score.js"></script>
   <script src="app.js"></script>
 </head>
@@ -13,7 +14,9 @@ The max. number of concerts to import tracks from are limited to the 20 most rec
 
 <form id="search">
   <ul>
-    <li>Band name <input type="text" id="query" />
+    <li>
+      <label for="query-multiple">Band names (one on each line)</label>
+      <textarea rows="1" id="query-multiple"></textarea>
     </li>
     <li>Time window (how long back)
       <select id ="timelimit">
