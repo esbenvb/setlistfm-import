@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
   <link rel="stylesheet" href="sp://resources/css/eve.css">
+  <link rel="stylesheet" type="text/css" href="sp://resources/css/api.css">
   <link rel="stylesheet" href="css/screen.css">
   <script src="javascript/jquery.min.js"></script>
   <script src="javascript/cufon-yui.js"></script>
@@ -21,12 +22,11 @@
   </div>
 
   <div class="region main">
-    <p>The max. number of concerts to import tracks from are limited to the 20 most recent concerts.</p>
     <form id="search">
       <ul class="form-items">
         <li>
           <label for="query-multiple">Band names (one on each line)</label>
-          <textarea rows="20" id="query-multiple"></textarea>
+          <textarea rows="3" id="query-multiple"></textarea>
         </li>
          <li>
           <label for="timelimit">Time window (how long back)</label>
@@ -54,6 +54,7 @@
             <option value="6">6</option>
             <option value="7">7</option>
           </select>
+          <div class="helping-text">The max. number of concerts to import tracks from are limited to the 20 most recent concerts.</div>
         </li>
         <li id="playlist-recent-container">
           <label for="playlist-recent">Recent playlists</label>

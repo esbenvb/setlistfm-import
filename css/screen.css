@@ -93,7 +93,7 @@ html {
   margin: 0;
   height: 100%;
   color: #404040;
-  font-family: Georgia, 'Times new roman', serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 
@@ -157,12 +157,14 @@ ul.form-items {
   padding-left: 250px;
 }
 ul.form-items textarea,
-ul.form-items input[type="text"] {
+ul.form-items input[type="text"],
+ul.form-items select {
   border: none;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid #cccccc;
   padding: 3px 5px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 ul.form-items input[type="submit"] {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b2db42), color-stop(100%, #88bd32));
@@ -195,6 +197,7 @@ ul.form-items li > label {
   font-size: 14px;
   display: block;
   margin: 0 0 5px 0;
+  color: black;
 }
 ul.form-items li:first-child {
   float: left;
@@ -203,4 +206,12 @@ ul.form-items li:first-child {
 ul.form-items li:first-child > textarea {
   width: 100%;
   resize: none;
+}
+
+/**
+ * Text elements.
+ */
+.helping-text {
+  font-size: 14px;
+  margin-top: 5px;
 }

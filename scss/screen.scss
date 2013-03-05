@@ -47,7 +47,7 @@ html {
   margin: 0;
   height: 100%;
   color: $base;
-  font-family: Georgia, 'Times new roman', serif;
+  font-family: Helvetica, Arial, sans-serif/*Georgia, 'Times new roman', serif*/;
   font-size: 20px;
 }
 
@@ -90,12 +90,14 @@ ul.form-items {
   padding-left: 250px;
 
   textarea,
-  input[type="text"] {
+  input[type="text"],
+  select {
     border: none;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid $grey2;
     padding: 3px 5px;
     box-sizing: border-box;
+    font-size: 16px;
   }
 
   input[type="submit"] {
@@ -123,6 +125,7 @@ ul.form-items {
       font-size: 14px;
       display: block;
       margin: 0 0 5px 0;
+      color: black;
     }
 
     &:first-child {
@@ -135,4 +138,12 @@ ul.form-items {
       }
     }
   }
+}
+
+/**
+ * Text elements.
+ */
+.helping-text {
+  font-size: 14px;
+  margin-top: 5px;
 }
