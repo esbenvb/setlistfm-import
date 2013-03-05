@@ -1,7 +1,6 @@
 /** 
  * Imports
  */
-/* line 17, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,45 +22,37 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -72,7 +63,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /**
  * Typo base
  */
-/* line 22, ../scss/screen.scss */
 h1,
 h2,
 h3 {
@@ -81,12 +71,10 @@ h3 {
   font-family: 'Metal mania';
 }
 
-/* line 28, ../scss/screen.scss */
 h1 {
   font-size: 50px;
 }
 
-/* line 32, ../scss/screen.scss */
 p {
   margin: 0 0 20px 0;
 }
@@ -94,23 +82,20 @@ p {
 /**
  * Base layout
  */
-/* line 39, ../scss/screen.scss */
 body {
   background: black url(http://registry.gimp.org/files/Flamesexample.gif) repeat-x left bottom;
   background-size: 100%;
 }
 
-/* line 45, ../scss/screen.scss */
 body,
 html {
   margin: 0;
   height: 100%;
   color: #404040;
-  font-family: Georgia, "Times new roman", serif;
+  font-family: Georgia, 'Times new roman', serif;
   font-size: 20px;
 }
 
-/* line 53, ../scss/screen.scss */
 .page-wrapper {
   width: 1040px;
   margin: 40px auto;
@@ -122,12 +107,10 @@ html {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* line 60, ../scss/screen.scss */
 .region {
   padding: 20px;
   overflow: hidden;
 }
-/* line 63, ../scss/screen.scss */
 .region.top {
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -140,11 +123,9 @@ html {
   background-image: -o-linear-gradient(#b2db42, #88bd32);
   background-image: linear-gradient(#b2db42, #88bd32);
 }
-/* line 67, ../scss/screen.scss */
 .region.top h1 {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
-/* line 72, ../scss/screen.scss */
 .region.main {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ececec), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(#ececec, #cccccc);
@@ -154,7 +135,6 @@ html {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-width: 1px 0;
 }
-/* line 78, ../scss/screen.scss */
 .region.bottom {
   -webkit-border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
@@ -171,12 +151,10 @@ html {
 /**
  * Form
  */
-/* line 87, ../scss/screen.scss */
 ul.form-items {
   margin: 0;
   padding-left: 250px;
 }
-/* line 92, ../scss/screen.scss */
 ul.form-items textarea,
 ul.form-items input[type="text"] {
   border: none;
@@ -185,7 +163,6 @@ ul.form-items input[type="text"] {
   padding: 3px 5px;
   box-sizing: border-box;
 }
-/* line 100, ../scss/screen.scss */
 ul.form-items input[type="submit"] {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b2db42), color-stop(100%, #88bd32));
   background-image: -webkit-linear-gradient(#b2db42, #88bd32);
@@ -205,28 +182,23 @@ ul.form-items input[type="submit"] {
   padding: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-/* line 111, ../scss/screen.scss */
 ul.form-items input[type="submit"]:hover {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
   background: #88bd32;
 }
-/* line 117, ../scss/screen.scss */
 ul.form-items li {
   margin: 0 0 10px 0;
 }
-/* line 120, ../scss/screen.scss */
 ul.form-items li > label {
   font-family: Arial;
   font-size: 14px;
   display: block;
   margin: 0 0 5px 0;
 }
-/* line 127, ../scss/screen.scss */
 ul.form-items li:first-child {
   float: left;
   margin-left: -250px;
 }
-/* line 131, ../scss/screen.scss */
 ul.form-items li:first-child > textarea {
   width: 100%;
   resize: none;
