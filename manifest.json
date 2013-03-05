@@ -7,6 +7,8 @@
   },
   "AppIcon": {
     "18x18": "images/18x18.png",
+    "36x18": "images/36x18.png",
+    "32x32": "images/32x32.png",
     "64x64:": "images/64x64:.png",
     "128x128": "images/128x128.png",
     "300x300": "images/300x300.png"
