@@ -83,7 +83,7 @@ p {
  * Base layout
  */
 body {
-  background: black url(http://registry.gimp.org/files/Flamesexample.gif) repeat-x left bottom;
+  background: black url(../images/Flamesexample.gif) repeat-x left bottom;
   background-size: 100%;
   padding: 40px;
 }
