@@ -6,10 +6,10 @@
     "en": "Setlist.fm playlists"
   },
   "AppIcon": {
-    "18x18": "icons/18x18.png",
-    "64x64:": "icons/64x64:.png",
-    "128x128": "icons/128x128.png",
-    "300x300": "icons/300x300.png"
+    "18x18": "images/18x18.png",
+    "64x64:": "images/64x64:.png",
+    "128x128": "images/128x128.png",
+    "300x300": "images/300x300.png"
   },
   "BundleIdentifier": "setlistfm-import",
   "BundleType": "Application",
@@ -22,5 +22,5 @@
     "util": "0.1.0"
    },
    "AcceptedLinkTypes": ["artist"],
-   "RequiredPermissions": [ "http://*.spotify.com", "http://spotify.com", "http://api.setlist.fm"]
+   "RequiredPermissions": ["http://*.spotify.com", "http://spotify.com", "http://api.setlist.fm"]
 }
