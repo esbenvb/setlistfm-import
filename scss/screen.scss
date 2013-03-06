@@ -47,8 +47,8 @@ html {
   margin: 0;
   height: 100%;
   color: $base;
-  font-family: Helvetica, Arial, sans-serif/*Georgia, 'Times new roman', serif*/;
-  font-size: 20px;
+  font-family:  Lucida Grande, Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
 .page-wrapper {
@@ -97,7 +97,8 @@ ul.form-items {
     border: 1px solid $grey2;
     padding: 3px 5px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
+    font-family:  Lucida Grande, Helvetica, Arial, sans-serif;
   }
 
   input[type="submit"] {
@@ -121,7 +122,6 @@ ul.form-items {
     margin: 0 0 10px 0;
 
     & > label {
-      font-family: Arial;
       font-size: 14px;
       display: block;
       margin: 0 0 5px 0;

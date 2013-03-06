@@ -93,8 +93,8 @@ html {
   margin: 0;
   height: 100%;
   color: #404040;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
 .page-wrapper {
@@ -164,7 +164,8 @@ ul.form-items select {
   border: 1px solid #cccccc;
   padding: 3px 5px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: Lucida Grande, Helvetica, Arial, sans-serif;
 }
 ul.form-items input[type="submit"] {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b2db42), color-stop(100%, #88bd32));
@@ -193,7 +194,6 @@ ul.form-items li {
   margin: 0 0 10px 0;
 }
 ul.form-items li > label {
-  font-family: Arial;
   font-size: 14px;
   display: block;
   margin: 0 0 5px 0;

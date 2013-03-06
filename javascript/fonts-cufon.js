@@ -4,4 +4,4 @@
  */
 
 
-Cufon.replace('h1, h2, h3', {'fontFamily': 'MetalManiaRegular'});
+Cufon.replace('h1, h2, h3, #submit-button', {'fontFamily': 'MetalManiaRegular'});
