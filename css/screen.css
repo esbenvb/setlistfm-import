@@ -215,3 +215,10 @@ ul.form-items li:first-child > textarea {
   font-size: 14px;
   margin-top: 5px;
 }
+
+/**
+ * API elements.
+ */
+.sp-list {
+  max-height: none;
+}

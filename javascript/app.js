@@ -1,5 +1,6 @@
 var sp = getSpotifyApi();
 var models = sp.require('$api/models');
+var views = sp.require('$api/views');
 
 var playlist = null;
 //TODO: Use local storage for list if possible.
@@ -48,12 +49,15 @@ $(document).ready(function () {
   $('#playlist-recent').change(function(){
     if ($(this).val() > -1) {
       playlist = recentPlaylists[$(this).val()];
+      var list = new views.List(playlist);
+      $('#results').html(list.node);
       $('#playlist-name-container').fadeOut('fast');
       $('#submit-button').removeAttr('disabled');
     }
     else {
       $('#playlist-name-container').fadeIn('fast');
       playlist = null;
+      $('#results').empty();
       if ($('#playlist-name').val().length) {
         $('#submit-button').removeAttr('disabled');
       }
@@ -105,6 +109,8 @@ function findAndAdd(artist, track, playlist) {
         break;
       }
     }
+    var list = new views.List(playlist);
+    $('#results').html(list.node);
   });
   search.appendNext();    
 }
